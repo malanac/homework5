@@ -78,6 +78,7 @@ footer{
    /*Your code here.*/
   animation-duration: 15s; 
   animation-name: logo_wiggle; 
+  animation-iteration-count: initial; 
 
 }
 
@@ -88,7 +89,6 @@ footer{
     flex-wrap: wrap; 
     justify-content: center; 
     align-items: center; 
-    flex-direction: column; 
 
     /*Your code here.*/
     /*Don't forget to vertically and horizontally alight the card*/
@@ -100,9 +100,7 @@ footer{
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
-  display: flex; 
   flex-basis: 400px; 
-  flex-direction: column; 
   /*Your code here.*/
   /*Take a look at flex-basis*/
 
@@ -153,6 +151,7 @@ footer{
   display: flex; 
   flex-wrap: wrap; 
   justify-content: center; 
+  align-content: stretch; 
   /*Your code here again.*/
 }
 
@@ -166,8 +165,7 @@ footer{
 header{
   display: flex;
   background: #fff;
-  border-bottom: 3px solid #50C7C7;
-  justify-content: center;  
+  border-bottom: 3px solid #50C7C7; 
   align-items: center;  
   flex-direction: column; 
   /*Your  code here again.*/
@@ -176,8 +174,7 @@ header{
 .nav_links{
   display: flex;
   /* display: inline-block;  */
-  flex-direction: column; 
-  justify-content: center;  
+  flex-direction: column;  
   align-items: center; 
   /*Your code here again.*/
 }
@@ -199,7 +196,6 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
-    display: flex; 
     flex-basis: 225px; 
   }
 
@@ -211,14 +207,12 @@ header{
   /* Navbar */
   header{
     /*Your code here again.*/  
-    display: flex; 
-    flex-flow: row wrap; 
+    flex-direction: row; 
     justify-content: space-between;  
   }
 
   .nav_links{
     /*Your code here again.*/
-    display: flex;
   flex-direction: row;   
   }
 
@@ -233,16 +227,30 @@ header{
   }
 
 body { 
-  background: None; 
+  background-image: None; 
 }
-.nav_links{
+
+.gallery{
+  display: none;
+}
+
+#gallery{
+  display: none; 
+}
+
+.pricing{
   display: flex; 
-  flex-direction: column; 
+  align-items: flex-start;
 }
+
+
   /*Your code here again.*/
   /*You will want four selectors*/  
 }
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
-@media {prefers-reduced-motion}
+@media screen and (prefers-reduced-motion: reduce) {
+  #logo {animation:none;}
+}
+  
